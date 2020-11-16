@@ -1,0 +1,100 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  @include align-center;
+  @include media-query(pc) {
+    padding: 80px 100px;
+  }
+
+  @include media-query(tl) {
+    padding: 80px 60px;
+  }
+
+  // TEMP BG
+  background: url("https://pixelarity.com/items/demos/lens/light/images/fulls/04.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  //
+  flex-direction: column;
+  padding: 80px 20px;
+
+  .banner {
+    @include align-center;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+
+    & > :first-child {
+      border-bottom: 1px solid $textScrolled;
+      border-top: 1px solid $textScrolled;
+      color: white;
+      font-size: 44px;
+      line-height: 50px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    & > :last-child {
+      font-family: "Poppins";
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .infoMenu {
+    @include align-center;
+    background-color: white;
+    max-width: 1024px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+
+    & > :not(:last-child) {
+      border-right: 2px solid rgb(228, 228, 228);
+    }
+
+    .infoDetail {
+      @include align-center;
+      flex-direction: column;
+      width: 100%;
+
+      &:hover {
+        color: $textScrolled;
+        cursor: pointer;
+      }
+
+      & > span {
+        font-size: 24px;
+        padding: 5px;
+        text-transform: uppercase;
+        transition: 0.3s ease;
+      }
+
+      & > div {
+        width: 0;
+        height: 1px;
+      }
+
+      .showUnderline {
+        border: 1px solid $textScrolled;
+        transition: 0.3s ease;
+        width: 50px;
+      }
+    }
+
+    .selected {
+      color: $textScrolled;
+    }
+  }
+
+  .infoDetails {
+    background-color: white;
+    max-width: 1024px;
+    padding: 30px 0px;
+    width: 100%;
+  }
+}
