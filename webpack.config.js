@@ -14,7 +14,7 @@ var config = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[hash].js",
-    publicPath: "/",
+    publicPath: "/info",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss"],
