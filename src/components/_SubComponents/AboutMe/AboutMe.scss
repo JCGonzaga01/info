@@ -1,17 +1,28 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
+  @include media-query(sp) {
+    @include align-center;
+    flex-direction: column;
+    margin-top: -2px;
+  }
+
   display: table-row;
   border-top: 2px solid rgb(228, 228, 228);
-  flex-wrap: wrap;
   max-width: 1024px;
   width: 100%;
 
   & > :nth-child(odd) {
-    border-right: 2px solid rgb(228, 228, 228);
+    @include media-query(pc, tl) {
+      border-right: 2px solid rgb(228, 228, 228);
+    }
   }
 
   .itemDetails {
+    @include media-query(sp) {
+      width: 100%;
+    }
+
     display: table-cell;
     border-bottom: 2px solid rgb(228, 228, 228);
     padding: 30px;
