@@ -8,18 +8,37 @@ type Props = {
 };
 
 const List: React.FC<Props> = ({ items, isEllipted = false, minItems = 0 }) => {
-  const [isShowMore, setisShowMore] = useState(isEllipted);
+  const [isHideItem, setIsHideItem] = useState(isEllipted);
+  const handleOnClickEllipsis = () => setIsHideItem(!isHideItem);
 
-  const handleOnClickEllipsis = () => setisShowMore(!isShowMore);
   return (
     <div className={styles.wrapper}>
-      {items.map((item, idx) => {
-        return isShowMore && idx >= minItems ? "" : <li key={`${idx}-${item}`}>{item}</li>;
-      })}
-      {isEllipted && (
-        <div className={styles.ellipsis} onClick={handleOnClickEllipsis}>{`Show ${
-          isShowMore ? "More" : "Less"
-        }`}</div>
+      {items.map((item, idx) =>
+        isEllipted && idx >= minItems ? "" : <li key={`${idx}-${item}`}>{item}</li>
+      )}
+      {isEllipted &&
+        items.map((item, idx) => {
+          const inlineStyle = isHideItem
+            ? {}
+            : {
+                transition: `opacity 1s ease-in-out ${(idx - minItems) * 0.2}s`,
+              };
+          return (
+            idx >= minItems && (
+              <li
+                key={`${idx}-${item}`}
+                className={isHideItem ? styles.hideItem : styles.showItem}
+                style={{ ...inlineStyle }}
+              >
+                {item}
+              </li>
+            )
+          );
+        })}
+      {isEllipted && items.length > minItems && (
+        <div className={styles.ellipsis} onClick={handleOnClickEllipsis}>
+          <span>{`Show ${isHideItem ? "More" : "Less"}`} </span>
+        </div>
       )}
     </div>
   );

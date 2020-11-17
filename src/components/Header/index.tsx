@@ -6,28 +6,25 @@ import styles from "./Header.scss";
 const Header: React.FC = () => {
   const [headerImg, setheaderImg] = useState(assets.jcgHeader);
 
-  const headerHover = (isHover: boolean) => () =>
+  const headerHoverLogo = (isHover: boolean) => () =>
     setheaderImg(isHover ? assets.jcgHeaderHover : assets.jcgHeader);
-
-  const handleOnClickLogo = () => window.open("https://jcgonzaga01.github.io/", "_self");
-
-  const handleOnClickMenu = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <img
-          src={headerImg}
-          alt={"John Christopher Gonzaga"}
-          className={styles.headerLogo}
-          onMouseEnter={headerHover(true)}
-          onMouseLeave={headerHover(false)}
-          onClick={handleOnClickLogo}
-        />
-        <div className={styles.menu} onClick={handleOnClickMenu}>
-          {"Home"}
+        <a href={"https://jcgonzaga01.github.io/"} target={"_self"}>
+          <img
+            src={headerImg}
+            alt={"John Christopher Gonzaga"}
+            className={styles.headerLogo}
+            onMouseEnter={headerHoverLogo(true)}
+            onMouseLeave={headerHoverLogo(false)}
+          />
+        </a>
+        <div className={styles.menu}>
+          <a href={"https://jcgonzaga01.github.io/"} target={"_self"}>
+            {"Home"}
+          </a>
         </div>
       </div>
     </div>

@@ -7,6 +7,9 @@ import jcgHeaderHover from "./jcg_header_hover.png";
 import education from "./svg/education.svg";
 import working from "./svg/working.svg";
 import guitar from "./svg/guitar.svg";
+import like from "./svg/like.svg";
+import dislike from "./svg/dislike.svg";
+import funFact from "./png/funFact.png";
 
 // ICONS
 import github from "./svg/github.svg";
@@ -21,6 +24,9 @@ export default {
   guitar,
   education,
   working,
+  like,
+  dislike,
+  funFact,
   // ICONS
   linkedin,
   github,

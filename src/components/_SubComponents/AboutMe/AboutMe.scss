@@ -1,7 +1,7 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  @include align-center;
+  display: table-row;
   border-top: 2px solid rgb(228, 228, 228);
   flex-wrap: wrap;
   max-width: 1024px;
@@ -11,32 +11,30 @@
     border-right: 2px solid rgb(228, 228, 228);
   }
 
-  & > :nth-child(even) {
-    border-left: 2px solid rgb(228, 228, 228);
-    margin-left: -2px;
-  }
-
   .itemDetails {
-    @include align-center;
-
+    display: table-cell;
     border-bottom: 2px solid rgb(228, 228, 228);
-    flex-direction: column;
-    padding: 30px 10px;
+    padding: 30px;
     width: 50%;
 
-    img {
-      filter: invert(0.5) sepia(1) saturate(5) hue-rotate(140deg);
-      height: 60px;
-      margin-bottom: 20px;
-      width: 60px;
-    }
+    & > :first-child {
+      @include align-center;
+      flex-direction: column;
 
-    .title {
-      font-family: "Poppins";
-      font-size: 30px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
+      img {
+        filter: invert(0.5) sepia(1) saturate(5) hue-rotate(140deg);
+        height: 60px;
+        margin-bottom: 20px;
+        width: 60px;
+      }
+
+      .title {
+        font-family: "Poppins";
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
     }
   }
 }

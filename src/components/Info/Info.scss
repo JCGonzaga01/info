@@ -10,12 +10,6 @@
     padding: 80px 60px;
   }
 
-  // TEMP BG
-  background: url("https://pixelarity.com/items/demos/lens/light/images/fulls/04.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  //
   flex-direction: column;
   padding: 80px 20px;
 
@@ -30,29 +24,39 @@
       border-top: 1px solid $textScrolled;
       color: white;
       font-size: 44px;
+      letter-spacing: 2px;
       line-height: 50px;
       padding: 20px;
       margin-bottom: 30px;
       text-align: center;
+      text-shadow: 3px 0px $textScrolled;
       text-transform: uppercase;
       width: fit-content;
     }
 
     & > :last-child {
+      color: white;
       font-family: "Poppins";
-      font-size: 20px;
+      font-size: 22px;
       letter-spacing: 1px;
+      text-align: center;
+      text-shadow: 1px 1px 1px black, 3px 1px 5px $textScrolled;
     }
   }
 
   .infoMenu {
     @include align-center;
     background-color: white;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     margin-bottom: 20px;
     max-width: 1024px;
     padding: 10px 0;
+    position: sticky;
     text-align: center;
+    top: 80px;
     width: 100%;
+    z-index: 99;
 
     & > :not(:last-child) {
       border-right: 2px solid rgb(228, 228, 228);

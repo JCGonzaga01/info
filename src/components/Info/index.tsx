@@ -1,7 +1,8 @@
-import React, { useState, MouseEvent } from "react";
-import AboutMe from "../_subComponents/AboutMe";
+import React, { useState } from "react";
+import banner from "assets/banner.jpg";
 import { bannerDetails, infoType } from "constants/info";
 import { classNames } from "helpers/functions";
+import AboutMe from "../_subComponents/AboutMe";
 import styles from "./Info.scss";
 
 const Info: React.FC = () => {
@@ -10,7 +11,12 @@ const Info: React.FC = () => {
   const handleOnClickType = (infoKey: string) => () => setSelected(infoKey);
 
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={styles.wrapper}
+      style={{
+        background: `url(${banner}) center center / cover no-repeat fixed`,
+      }}
+    >
       <div className={styles.banner}>
         <div>{bannerDetails.title}</div>
         <div>{bannerDetails.description}</div>

@@ -27,15 +27,18 @@
     }
 
     .menu {
-      cursor: pointer;
       font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
-      transition: 0.25s ease-in-out;
-      color: $textDefault;
 
-      &:hover {
-        color: $textDefaultHover;
+      a {
+        color: $textDefault;
+        text-decoration: none;
+        transition: 0.25s ease-in-out;
+
+        &:hover {
+          color: $textDefaultHover;
+        }
       }
     }
   }

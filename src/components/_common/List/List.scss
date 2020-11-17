@@ -2,23 +2,39 @@
 
 .wrapper {
   @include align-center;
+  align-items: flex-start;
   flex-direction: column;
+  font-family: "Poppins";
+  width: 100%;
+
+  .hideItem {
+    height: 0;
+    opacity: 0;
+  }
+
+  .showItem {
+    opacity: 1;
+  }
 
   .ellipsis {
-    border-top: 1px solid $textScrolled;
-    border-bottom: 1px solid $textScrolled;
-    color: $textScrolled;
-    cursor: pointer;
-    font-family: "Poppins";
     margin: 20px 0;
-    padding: 0 5px;
-    transition: 0.3s ease-in-out;
-    width: fit-content;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
 
-    &:hover {
-      border-top: 1px solid #006a9c;
-      border-bottom: 1px solid #006a9c;
-      color: #006a9c;
+    & > span {
+      border-top: 1px solid $textScrolled;
+      border-bottom: 1px solid $textScrolled;
+      color: $textScrolled;
+      cursor: pointer;
+      padding: 0 5px;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        border-top: 1px solid #006a9c;
+        border-bottom: 1px solid #006a9c;
+        color: #006a9c;
+      }
     }
   }
 }
