@@ -1,5 +1,5 @@
 export const bannerDetails = {
-  title: "Information page",
+  title: "Wanna know me more?",
   description: "Skills, Fun Facts, Hobbies, and more...",
 };
 

@@ -1,28 +1,18 @@
 import React from "react";
+import { List } from "components/_common";
 import { aboutMeItems } from "constants/aboutMe";
-import { classNames } from "helpers/functions";
 import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {
   return (
     <div className={styles.wrapper}>
-      {aboutMeItems.map((item, idx) => {
-        const isOdd = (idx + 1) % 2;
-        return (
-          <div
-            key={`${idx}-${item.title}`}
-            className={classNames(styles.itemDetails, isOdd && styles.isOdd)}
-          >
-            <img src={item.icon} alt={item.title} />
-            <div className={styles.title}>{item.title}</div>
-            <div>
-              {item.details.map((detail, idx) => (
-                <li key={`${idx}-${detail}`}>{detail}</li>
-              ))}
-            </div>
-          </div>
-        );
-      })}
+      {aboutMeItems.map((item, idx) => (
+        <div key={`${idx}-${item.title}`} className={styles.itemDetails}>
+          <img src={item.icon} alt={item.title} />
+          <div className={styles.title}>{item.title}</div>
+          <List items={item.details} isEllipted minItems={3} />
+        </div>
+      ))}
     </div>
   );
 };

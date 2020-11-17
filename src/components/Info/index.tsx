@@ -1,5 +1,5 @@
 import React, { useState, MouseEvent } from "react";
-import AboutMe from "../_SubComponents/AboutMe";
+import AboutMe from "../_subComponents/AboutMe";
 import { bannerDetails, infoType } from "constants/info";
 import { classNames } from "helpers/functions";
 import styles from "./Info.scss";

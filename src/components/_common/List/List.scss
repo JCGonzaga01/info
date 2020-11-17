@@ -1,0 +1,24 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  @include align-center;
+  flex-direction: column;
+
+  .ellipsis {
+    border-top: 1px solid $textScrolled;
+    border-bottom: 1px solid $textScrolled;
+    color: $textScrolled;
+    cursor: pointer;
+    font-family: "Poppins";
+    margin: 20px 0;
+    padding: 0 5px;
+    transition: 0.3s ease-in-out;
+    width: fit-content;
+
+    &:hover {
+      border-top: 1px solid #006a9c;
+      border-bottom: 1px solid #006a9c;
+      color: #006a9c;
+    }
+  }
+}
