@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import banner from "assets/banner.jpg";
+import { AboutMe, Skills } from "../_subComponents";
 import { bannerDetails, infoType } from "constants/info";
 import { classNames } from "helpers/functions";
-import AboutMe from "../_subComponents/AboutMe";
 import styles from "./Info.scss";
 
 const Info: React.FC = () => {
-  const [selected, setSelected] = useState("aboutMe");
+  const [selected, setSelected] = useState("skills");
+  const [selectedComp, setSelectedComp] = useState<React.FC>(Skills);
 
-  const handleOnClickType = (infoKey: string) => () => setSelected(infoKey);
+  const handleOnClickType = (infoKey: string, comp: React.FC) => () => {
+    setSelected(infoKey);
+    setSelectedComp(comp);
+  };
 
   return (
     <div
@@ -27,7 +31,7 @@ const Info: React.FC = () => {
             key={`${idx}-${item.key}`}
             className={styles.infoDetail}
             title={item.key}
-            onClick={handleOnClickType(item.key)}
+            onClick={handleOnClickType(item.key, item.component)}
           >
             <span className={classNames(selected === item.key && styles.selected)}>
               {item.value}
@@ -36,9 +40,7 @@ const Info: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className={styles.infoDetails}>
-        <AboutMe />
-      </div>
+      <div className={styles.infoDetails}>{selectedComp}</div>
     </div>
   );
 };

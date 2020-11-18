@@ -1,0 +1,24 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  .skillContainer {
+    @include align-center;
+    border-bottom: 2px solid rgb(228, 228, 228);
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 30px;
+
+    .icon {
+      filter: invert(0.55) sepia(1) saturate(9) hue-rotate(180deg);
+      height: 60px;
+      margin-bottom: 20px;
+      width: 60px;
+    }
+
+    .title {
+      font-size: 25px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+  }
+}

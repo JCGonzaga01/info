@@ -4,12 +4,15 @@ import jcgHeaderHover from "./jcg_header_hover.png";
 
 // SVG
 // - About Me
-import education from "./svg/education.svg";
-import working from "./svg/working.svg";
-import guitar from "./svg/guitar.svg";
 import like from "./svg/like.svg";
 import dislike from "./svg/dislike.svg";
 import funFact from "./png/funFact.png";
+import bucketList from "./svg/bucketList.svg";
+// - Skills
+import web from "./svg/web.svg";
+import database from "./svg/database.svg";
+import otherTools from "./svg/otherTools.svg";
+import scrum from "./svg/scrum.svg";
 
 // ICONS
 import github from "./svg/github.svg";
@@ -21,12 +24,15 @@ export default {
   jcgHeader,
   jcgHeaderHover,
   // ABOUT ME
-  guitar,
-  education,
-  working,
   like,
   dislike,
   funFact,
+  bucketList,
+  // SKILLS
+  web,
+  database,
+  otherTools,
+  scrum,
   // ICONS
   linkedin,
   github,

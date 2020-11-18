@@ -1,3 +1,5 @@
+@import "helpers/stylings/_index";
+
 html {
   box-sizing: border-box;
 }
@@ -8,6 +10,10 @@ html {
 }
 
 body {
+  @include media-query(sp) {
+    font-family: "Poppins";
+  }
+
   margin: 0;
   padding: 0;
   font-family: "Concert One", "Poppins";

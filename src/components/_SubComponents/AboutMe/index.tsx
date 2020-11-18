@@ -5,7 +5,7 @@ import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {
   return (
-    <div>
+    <div className={styles.fadeIn}>
       {aboutMeItems.map((itemRow, idx) => (
         <div key={idx} className={styles.wrapper}>
           {itemRow.map((item, idx) => (
