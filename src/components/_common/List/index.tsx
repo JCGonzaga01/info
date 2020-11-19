@@ -21,7 +21,7 @@ const List: React.FC<Props> = ({ items, isEllipted = false, minItems = 0 }) => {
           const inlineStyle = isHideItem
             ? {}
             : {
-                transition: `opacity 1s ease-in-out ${(idx - minItems) * 0.2}s`,
+                transition: `opacity 0.5s ease-in-out ${(idx - minItems) * 0.1}s`,
               };
           return (
             idx >= minItems && (
