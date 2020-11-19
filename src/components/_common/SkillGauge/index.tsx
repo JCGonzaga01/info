@@ -4,10 +4,10 @@ import styles from "./SkillGauge.scss";
 type Props = {
   title: string;
   score: number;
-  color: string;
+  color?: string;
 };
 
-const SkillGauge: React.FC<Props> = ({ title, score, color }) => {
+const SkillGauge: React.FC<Props> = ({ title, score, color = "00adff" }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>{title}</div>
@@ -15,10 +15,10 @@ const SkillGauge: React.FC<Props> = ({ title, score, color }) => {
         className={styles.gauge}
         style={{
           backgroundColor: color,
-          width: `${score * 20}%`,
+          width: `${score * 10}%`,
         }}
       />
-      <div className={styles.score}>{`${score}/5`}</div>
+      <div className={styles.score}>{`${score}/10`}</div>
     </div>
   );
 };

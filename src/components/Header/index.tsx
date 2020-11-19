@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <a href={"https://jcgonzaga01.github.io/"} target={"_self"}>
+        <a href={"/"} target={"_self"}>
           <img
             src={headerImg}
             alt={"John Christopher Gonzaga"}
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           />
         </a>
         <div className={styles.menu}>
-          <a href={"https://jcgonzaga01.github.io/"} target={"_self"}>
+          <a href={"/"} target={"_self"}>
             {"Home"}
           </a>
         </div>
