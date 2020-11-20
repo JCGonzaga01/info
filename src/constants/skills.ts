@@ -5,7 +5,7 @@ export const skillsItems: SkillsItems = [
   {
     title: "WEB",
     icon: assets.web,
-    color: "rgb(188 198 281)",
+    color: "rgb(146 158 228)",
     skills: [
       {
         name: "ReactJS",
@@ -79,7 +79,7 @@ export const skillsItems: SkillsItems = [
   {
     title: "METHODOLOGIES",
     icon: assets.scrum,
-    color: "rgb(199 218 95)",
+    color: "rgb(237 239 128)",
     skills: [
       {
         name: "SCRUM-AGILE",
@@ -94,7 +94,7 @@ export const skillsItems: SkillsItems = [
   {
     title: "OTHER TOOLS",
     icon: assets.otherTools,
-    color: "rgb(255 158 188)",
+    color: "rgb(255 134 171)",
     skills: [
       {
         name: "GIT",
