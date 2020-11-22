@@ -24,6 +24,10 @@
     .headerLogo {
       cursor: pointer;
       height: 60px;
+
+      &:hover {
+        filter: invert(0.4) sepia(1) saturate(15) hue-rotate(180deg);
+      }
     }
 
     .menu {

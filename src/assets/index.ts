@@ -1,6 +1,5 @@
 // HEADER
-import jcgHeader from "./jcg_header.png";
-import jcgHeaderHover from "./jcg_header_hover.png";
+import headerLogo from "./headerLogo.png";
 
 // SVG
 // - About Me
@@ -21,8 +20,7 @@ import email from "./svg/email.svg";
 
 export default {
   // Header
-  jcgHeader,
-  jcgHeaderHover,
+  headerLogo,
   // ABOUT ME
   like,
   dislike,
