@@ -84,3 +84,7 @@ To know more on how to host repo project in Github properly, kindly read this [a
 
 - Please don't forget to send love and support by giving star to this project.
 - If you encounter some issues or would like to add some enhancement, never hesitate to file an issue ticket and send PR.
+
+## License
+
+[MIT](https://github.com/JCGonzaga01/info/blob/master/LICENSE)
