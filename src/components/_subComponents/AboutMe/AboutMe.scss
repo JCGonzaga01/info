@@ -7,7 +7,8 @@
     margin-top: -2px;
   }
 
-  display: table-row;
+  display: flex;
+  flex-wrap: wrap;
   border-top: 2px solid rgb(228, 228, 228);
   max-width: 1024px;
   width: 100%;
