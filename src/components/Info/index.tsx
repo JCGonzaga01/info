@@ -51,7 +51,12 @@ const Info: React.FC = () => {
         {/* Due to unable to pass component dynamically because of ReactHooks rule,
          /* Specify all created _subComponents here 
          */}
-        {selected === "skills" ? <Skills /> : selected === "aboutMe" ? <AboutMe /> : ""}
+        {
+          {
+            'skills': <Skills />,
+            'aboutMe': <AboutMe />,
+          } [selected] || <AboutMe />
+        }
       </div>
     </div>
   );
