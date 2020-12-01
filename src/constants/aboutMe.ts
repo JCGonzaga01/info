@@ -9,7 +9,7 @@ export const aboutMeItems = [
       "Jogging",
       "Playing Guitar",
       "Playing Cajon",
-      "Playing Keyboard (Still learning :D )",
+      `Playing Keyboard (Still learning ${String.fromCodePoint(128513)})`,
       "Mountain Hiking",
       "Listening to christian music",
       "Listening to christian podcast",
@@ -49,7 +49,7 @@ export const aboutMeItems = [
       "Experience a Business-Class and First-Class Flight Seat.",
       "Climb Mt.Fuji in Japan.",
       "Learn how to skii or snowboard.",
-      "I have many more but can't share all of them here. :) ",
+      `I have many more but can't share all of them here. ${String.fromCodePoint(128521)} `,
     ],
   },
 ];
