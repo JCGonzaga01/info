@@ -28,9 +28,11 @@ const Info: React.FC = () => {
         background: `url(${banner}) center center / cover no-repeat fixed`,
       }}
     >
-      <div className={styles.banner}>
-        <div>{bannerDetails.title}</div>
-        <div>{bannerDetails.description}</div>
+      <div className={styles.bannerWrapper}>
+        <div className={styles.bannerContainer}>
+          <div className={styles.title}>{bannerDetails.title}</div>
+          <div className={styles.desc}>{bannerDetails.description}</div>
+        </div>
       </div>
       <div className={styles.infoMenu}>
         {infoType.map((item, idx) => (
@@ -51,12 +53,10 @@ const Info: React.FC = () => {
         {/* Due to unable to pass component dynamically because of ReactHooks rule,
          /* Specify all created _subComponents here 
          */}
-        {
-          {
-            'skills': <Skills />,
-            'aboutMe': <AboutMe />,
-          } [selected] || <AboutMe />
-        }
+        {{
+          skills: <Skills />,
+          aboutMe: <AboutMe />,
+        }[selected] || <AboutMe />}
       </div>
     </div>
   );
