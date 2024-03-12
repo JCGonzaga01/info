@@ -24,24 +24,40 @@ export const skillsItems: SkillsItems = [
         score: 9,
       },
       {
+        name: "React/ContextAPI",
+        score: 9,
+      },
+      {
         name: "TypeScript",
         score: 8,
       },
       {
-        name: "Webpack",
+        name: "Reach-Hook-Form",
+        score: 9,
+      },
+      {
+        name: "Tanstack/React-Query",
         score: 8,
       },
       {
-        name: "NodeJS",
-        score: 7,
-      },
-      {
-        name: "ExpressJS",
+        name: "NextJS",
         score: 7,
       },
       {
         name: "Vue",
-        score: 4,
+        score: 6,
+      },
+      {
+        name: "Webpack",
+        score: 6,
+      },
+      {
+        name: "NodeJS",
+        score: 5,
+      },
+      {
+        name: "ExpressJS",
+        score: 5,
       },
       {
         name: "AngularJS",
@@ -83,11 +99,11 @@ export const skillsItems: SkillsItems = [
     skills: [
       {
         name: "SCRUM-AGILE",
-        score: 9,
+        score: 10,
       },
       {
         name: "SAFe (Scaled Agile Framework)",
-        score: 7,
+        score: 10,
       },
     ],
   },
@@ -98,15 +114,15 @@ export const skillsItems: SkillsItems = [
     skills: [
       {
         name: "GIT",
-        score: 9,
+        score: 10,
       },
       {
         name: "Docker",
-        score: 8,
+        score: 5,
       },
       {
         name: "VS Code Remote Container",
-        score: 7,
+        score: 5,
       },
       {
         name: "Heroku",
